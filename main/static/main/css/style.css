@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;800&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+
+a:hover {
+    color: rgb(41, 119, 207);
+}
+
+hr {
+    margin: 20px 0;
+    height: 3px;
+    background-color: rgb(202, 202, 202);
+    border: 0px;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    margin-left: 50px;
+}
+
+#logo:hover {
+    color: rgb(41, 119, 207);
+}
+
+#links {
+    margin-right: 50px;
+}
+
+#links > a {
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    margin-left: 15px;
+}
+
+#links > a:hover {
+    color: rgb(41, 119, 207);
+}
+
+main {
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+}
+
+aside {
+    background-color: rgb(228, 228, 228);
+    width: 20%;
+    min-height: 100vh;
+}
+
+content {
+    width: 80%;
+}
+
+section {
+    margin: 50px;
+}
+
+#content {
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#content > div {
+    width: 20%;
+}
+
+.block_app {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.desc_app {
+    margin-left: 20px;
+}
+
+.btn {
+    background-color: rgb(41, 119, 207);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: rgb(30, 84, 146);
+    color: white;
+}
+
+.form-control  input, .form-control  textarea, .form-control select {
+    border: 1px solid silver;
+    border-radius: 0px;
+    padding: 10px;
+    outline: none;
+    display: block;
+    resize: none;
+}
+
+.form-control  textarea {
+    width: 98%;
+    padding: 1%;
+
+}
+
+.form-control > label, .form-control > button {
+    display: block;
+}
+
+.form-control > .cke_inner {
+    width: 100%;
+}
+
+.app {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.link_app {
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin: 0 10%;
+}
+
+.comments {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgb(236, 236, 236);
+}
+
+.comment {
+    margin-bottom: 20px;
+
+}
+

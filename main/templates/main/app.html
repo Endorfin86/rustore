@@ -1,0 +1,61 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{ app.title }}{% endblock %}
+
+{% block aside %}
+
+<h1><a href="{% url 'groups' %}">Группы</a></h1> 
+<br><br>
+{% for el in groups %}
+<p><a href="{{ el.get_absolute_url }}">{{ el.title }}</a></p>
+<br>
+{% endfor %}
+
+<h1>{{ group.title }}</h1>
+<br>
+{{ group.desc }} 
+{% endblock %}
+
+{% block content %}
+<h1>Приложения</h1>
+<br><br>
+<div class="block_app">
+<div class="img_app">
+    <img width="200" src="{{ app.image.url}}" alt="">
+</div>
+
+<div class="desc_app">
+    <h2>{{ app.title }}</h2><br>
+    {{ app.desc }}<br>
+    <button class="btn">Скачать приложение</button>
+    
+    
+    <div class="comments">
+    <h2>Комментарии</h2>
+    <br>
+    {% if comment %}
+    {% for comm in comment %}
+    <p class="comment">
+        <b><i class="fa-regular fa-circle-user"></i> {{ comm.avtor }}</b> пишет:<br>
+        {{ comm.text|safe }}
+    </p>
+    {% endfor %}
+    {% else %}
+    Здесь пока нет комментариев<br><br>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+    <form class="form-control" method="post">
+    {% csrf_token %}
+    <br>
+    {{ form.media }}
+    {{ form }}
+    <button class="btn" type="submit">Отправить</button>
+    </form>
+    {% endif %}
+    </div>
+
+</div>
+</div>
+
+{% endblock %}
